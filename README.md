@@ -38,7 +38,7 @@ You need Node.js and npm installed on your computer.
 3. Add these variables to `.env.local`:
 
    ```env
-   VITE_TMDB_API_KEY=your_tmdb_api_key
+   TMDB_API_KEY=your_tmdb_api_key
    VITE_APPWRITE_PROJECT_ID=your_appwrite_project_id
    VITE_APPWRITE_DATABASE_ID=your_appwrite_database_id
    VITE_APPWRITE_COLLECTION_ID=your_appwrite_collection_id
@@ -63,7 +63,7 @@ The Appwrite collection needs these attributes:
 - `movie_id` for the movie ID
 - `poster_url` for the movie poster address
 
-The project ID, database ID, and collection ID must match the values in `.env.local`.
+The project ID, database ID, and collection ID must match the values in `.env.local`. In Vercel, add the same variables in the project environment settings. Keep `TMDB_API_KEY` without the `VITE_` prefix so it stays on the server and is not included in the browser bundle.
 
 ## Available commands
 
