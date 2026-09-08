@@ -1,10 +1,15 @@
 import React from 'react'
 
 const MovieCard = ({ movie:
-  { title, vote_average, poster_path, release_date, original_language }
+  { id, title, vote_average, poster_path, release_date, original_language }
 }) => {
   return (
-    <div className="movie-card">
+    <a
+      className="movie-card block"
+      href={`https://www.themoviedb.org/movie/${id}`}
+      target="_blank"
+      rel="noreferrer"
+    >
       <img
         src={poster_path ?
           `https://image.tmdb.org/t/p/w500/${poster_path}` : '/no-movie.png'}
@@ -29,7 +34,7 @@ const MovieCard = ({ movie:
           </p>
         </div>
       </div>
-    </div>
+    </a>
   )
 }
 export default MovieCard
